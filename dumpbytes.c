@@ -27,8 +27,9 @@
 #include "parg.h"
 
 #if defined(_MSC_VER)
-#       define ftello   _ftelli64
-#       define fseeko   _fseeki64
+#       define ftello   ftell
+#       define fseeko   fseek
+typedef long off_t;
 #endif
 
 typedef struct
