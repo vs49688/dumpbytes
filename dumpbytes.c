@@ -66,7 +66,7 @@ static void write_array(FILE *fp, const char *name, const void *p, size_t size, 
 {
 	const uint8_t *b = (const uint8_t*)p;
 
-	fprintf(fp, "const uint8_t *%s[%zu] =\n{", name, size);
+	fprintf(fp, "const uint8_t %s[%zu] =\n{", name, size);
 
 	for(size_t i = 0; i < size; ++i)
 	{
